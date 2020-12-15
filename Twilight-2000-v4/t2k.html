@@ -171,12 +171,15 @@
 		</span>
 	</div>
 	<p>&nbsp;</p>
-	<div class="2colrow">
+	<div class="3colrow">
 		<div class="col">
 			<label>Ranged Combat</label><button type='roll' name='roll_rangedcombat' value='&{template:default} {{name=@{character_name}}} {{result=[[1d@{rangedcombatdie}>6+1d@{agilitydie}>6+?{Number of Ammodice|1}d6>6]]}}'></button>
 		</div>
 		<div class="col">
 			<label>Close Combat</label><button type='roll' name='roll_closecombat' value='&{template:default} {{name=@{character_name}}} {{result=[[1d@{closecombatdie}>6+1d@{strengthdie}>6]]}}'></button>
+		</div>
+		<div class="col">
+			<label>CUF</label><select name='attr_CUF' class='sheet-short'><option value=''></option><<option value='A'>A</option><option value='B'>B</option><option value='C'>C</option><option value='D'>D</option></select>
 		</div>
 	</div>
 	<div class="row">
@@ -242,19 +245,19 @@
 		<div class="col">
 			<h3>&nbsp;</h3>
 			<label>Damage:</label><input type="number" name="attr_damage" />
-			<br />
+			<p>&nbsp;</p>
 			<label>Hit Capacity:</label><input type="number" name="attr_hitcapacity" value="((@{strengthdie}+@{agilitydie})/2)" disabled="true" />
 		</div>
 		<div class="col">
 			<h3>&nbsp;</h3>
 			<label>Stress:</label><input type="number" name="attr_stress" />
-			<br />
+			<p>&nbsp;</p>
 			<label>Stress Capacity:</label><input type="number" name="attr_stresscapacity" value="((@{intelligencedie}+@{empathydie})/2)" disabled="true" />
 		</div>
 		<div class="col">
 			<h3>Radiation</h3>
 			<label>Temporary:</label><input type="number" name="attr_temporaryradiation" />
-			<br />
+			<p>&nbsp;</p>
 			<label>Permanent:</label><input type="number" name="attr_permanentradiation" />
 		</div>
 	</div>
