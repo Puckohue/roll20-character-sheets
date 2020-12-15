@@ -10,7 +10,7 @@
 <div class='sheet-basic'>
 	<div class="3colrow">
 		<div class="col">
-			<img src="https://github.com/Puckohue/roll20-character-sheets/blob/t2k4e/Twilight-2000-v4/logo.png" />
+			<img src="https://antikvanti.com/priv/t2k/csheet/Images/logo.png" />
 		</div>
 	    <div class="col">
     		<label>Name:</label><input type="text" name="attr_character_name" />
@@ -75,18 +75,18 @@
 	<input name="attr_persuasiondie" type="hidden">
 	<input name="attr_medicalaiddie" type="hidden">
 
-	<div class="3colrow">
-		<div class="col">
+	<div class="moddie-section">
+		<span>
 			<label>Die 1:</label><select name='attr_die1' class='sheet-short'><option value='12'>d12</option><option value='10'>d10</option><option value='8' selected="selected">d8</option><option value='6'>d6</option></select>
-		</div>
-		<div class="col">
+		</span>
+		<span>
 			<label>Die 2:</label><select name='attr_die2' class='sheet-short'><option value='12'>d12</option><option value='10'>d10</option><option value='8' selected="selected">d8</option><option value='6'>d6</option></select>
-		</div>
-		<div class="col">
+		</span>
+		<span>
 			<label>Ammodice:</label><input type="number" name="attr_ammodice" /><button type='roll' name='roll_generaldice' value='&{template:default} {{name=@{character_name}}} {{result=[[1d@{die1}>6+1d@{die2}>6+@{ammodice}d6>6]]}}'></button>
-		</div>
+		</span>
 	</div>
-	<br>&nbsp;</br>
+	<p>&nbsp;</p>
 	<div class="skill-section">
 	     <span>
 			<label>STRENGTH</label><select name='attr_strength' class='sheet-short'><option value='A'>A</option><option value='B'>B</option><option value='C' selected="selected">C</option><option value='D'>D</option></select>
@@ -159,17 +159,18 @@
      </div>
 	<br>&nbsp;</br>
 	<h2>Combat</h2>
-	<div class="3colrow">
-		<div class="col">
+	<div class="moddie-section">
+		<span>
 			<label>Die 1:</label><select name='attr_die1' class='sheet-short'><option value='12'>d12</option><option value='10'>d10</option><option value='8' selected="selected">d8</option><option value='6'>d6</option></select>
-		</div>
-		<div class="col">
+		</span>
+		<span>
 			<label>Die 2:</label><select name='attr_die2' class='sheet-short'><option value='12'>d12</option><option value='10'>d10</option><option value='8' selected="selected">d8</option><option value='6'>d6</option></select>
-		</div>
-		<div class="col">
+		</span>
+		<span>
 			<label>Ammodice:</label><input type="number" name="attr_ammodice" /><button type='roll' name='roll_generaldice' value='&{template:default} {{name=@{character_name}}} {{result=[[1d@{die1}>6+1d@{die2}>6+@{ammodice}d6>6]]}}'></button>
-		</div>
+		</span>
 	</div>
+	<p>&nbsp;</p>
 	<div class="2colrow">
 		<div class="col">
 			<label>Ranged Combat</label><button type='roll' name='roll_rangedcombat' value='&{template:default} {{name=@{character_name}}} {{result=[[1d@{rangedcombatdie}>6+1d@{agilitydie}>6+?{Number of Ammodice|1}d6>6]]}}'></button>
