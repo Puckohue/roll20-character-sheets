@@ -32,11 +32,11 @@ textarea {
 /* Targetted styling that only effects elements with these classes */
 
 input.sheet-short {
-	width: 10%;
+	width: 25px;
 }
 
 select.sheet-short {
-	width: 25%;
+	width: 50px;
 }
 
 select.sheet-dtype {
@@ -56,6 +56,12 @@ span.sheet-dee {
 .sheet-skill-section{
   display: grid;
   grid-template-columns: 175px 175px 175px 175px;
+}
+
+.sheet-moddie-section{
+  display: grid;
+  grid-template-columns: 100px 100px 75px;
+  grid-template-rows: 40px;
 }
 
 .sheet-weapon-section{
@@ -78,13 +84,13 @@ span.sheet-dee {
 }
 
 .sheet-stats h3:first-child {
-	margin-left: 35%;
-	margin-right: 15%;
+	margin-left: 10px;
+	margin-right: 10px;
 }
 
 .sheet-stats input {
-	margin-right: 8%;
-	width: 17%;
+	margin-right: 10px;
+	width: 25px;
 }
 
 /* Tab stuff */
