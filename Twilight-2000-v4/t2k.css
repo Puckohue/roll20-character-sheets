@@ -1,8 +1,8 @@
 /* Set the min-width so that when the window is resized the look will stay consistant */
 
 .charsheet {
-	background-color: #999966;
-	min-width: 800px;
+  background-color: #ebe3d1;
+  min-width: 800px;
 }
 
 /* Universal styling applied to all elements of these types */
