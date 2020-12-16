@@ -1,7 +1,7 @@
 /* Set the min-width so that when the window is resized the look will stay consistant */
 
 .charsheet {
-	background-color: #999966;
+	background-color: #ebe3d1;
 	min-width: 800px;
 }
 
@@ -14,6 +14,8 @@ h2 {
 
 label {
 	display: inline-block;
+	color: #877d70;
+	font-family: 'Stencil Std', fantasy;
 }
 
 input {
