@@ -7,7 +7,6 @@ Created by Jacob Andersson
 * Calcualtes encumbrance total
 
 # To Do
-* Improve display of multiple successes on the d10 or d12 dice rolls (when you roll a 10 or higher on either dice)
 * Improve the general design and look
 * Add hit location roll
 * Roll templates
@@ -20,3 +19,4 @@ Created by Jacob Andersson
 * Moved hit capacity / stress capacity higher up, at the top of the 'combat & health' tab
 * Calculate hit capacity and stress capacity correctly
 * Made "Multiple successes" on the d10 or d12 dice rolls (when you roll a 10 or higher on either dice) display as critical hits as a first step
+* Fixed count and display of multiple successes on 10+
