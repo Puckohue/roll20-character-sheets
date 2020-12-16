@@ -5,7 +5,7 @@
     <button type="action" name="act_gear" >Gear</button>
 </div>
 <input type='hidden' class='sheet-tabstoggle' name='attr_sheetTab'  value='basic'  />
-<br>&nbsp;</br>
+<br />
 
 <div class='sheet-basic'>
 	<div class="3colrow">
@@ -13,50 +13,61 @@
 			<img src="https://raw.githubusercontent.com/Puckohue/roll20-character-sheets/t2k4e/Twilight-2000-v4/logo.png" />
 		</div>
 	    <div class="col">
-    		<label>Name:</label><input type="text" name="attr_character_name" />
+    		<label>Name</label><input type="text" name="attr_character_name" />
 		</div>
 		<div class="col">
-			<label>Nationality:</label><input type="text" name="attr_nationality" />
+			<label>Nationality</label><input type="text" name="attr_nationality" />
 		</div>
 	</div>
+
 	<hr/>
+
 	<div class="3colrow">
 		<div class="col">
-			<label>Branch:</label><input type="text" name="attr_branch" />
-			<br>&nbsp;</br>
-           	<label>Military Rank:</label><input type="text" name="attr_militaryrank" />
-			<br>&nbsp;</br>
-           	<label>Buddy:</label><input type="text" name="attr_buddy" />
+			<label>Branch</label><input type="text" name="attr_branch" />
+			<br /><br />
+           	<label>Military Rank</label><input type="text" name="attr_militaryrank" />
+			<br /><br />
+           	<label>Buddy</label><input type="text" name="attr_buddy" />
 		</div>
 		<div class="col">
-			<label>Appearance:</label><textarea name="attr_appearance"></textarea>
+			<label>Appearance</label><textarea name="attr_appearance"></textarea>
       	</div>
 		<div class="col">
-			<label>Moral Code:</label><textarea name="attr_moralcode"></textarea>
-     	 	</div>
+			<label>Moral Code</label><textarea name="attr_moralcode"></textarea>
+		</div>
 	</div>
-<br>&nbsp;</br>
+	
+	<br />
+	
 	<div class="3colrow">
 		<div class="col">
-			<label>Big Dream:</label><textarea name="attr_bigdream"></textarea>
+			<label>Big Dream</label><textarea name="attr_bigdream"></textarea>
      	 </div>
 		<div class="col">
-			<label>How You Met The Group:</label><textarea name="attr_howyoumetthegroup"></textarea>
-     	 </div>
+			<label>How You Met The Group</label><textarea name="attr_howyoumetthegroup"></textarea>
+		</div>
 		<div class="col">
-			<label>Current Experience:</label><input type="text" name="attr_currentexperience" />
-<br>&nbsp;</br>
-          	 <label>Total Experience:</label><input type="text" name="attr_totalexperience" />
+			<label>Experience</label>
+			<p class="lesserLabel">
+				<strong>Current </strong><input type="number" name="attr_currentexperience" />
+			</p>
+			<p class="lesserLabel">
+				<strong>Total </strong><input type="number" name="attr_totalexperience" />
+			</p>
+			<br /><br />
 		</div>
      </div>
 </div>
 
 <div class='sheet-attributes'>
-     <div class="row">
-          <img src="https://raw.githubusercontent.com/Puckohue/roll20-character-sheets/t2k4e/Twilight-2000-v4/logo.png" />
-     </div>
-	<br>&nbsp;</br>
+	<div class="row">
+		<img src="https://raw.githubusercontent.com/Puckohue/roll20-character-sheets/t2k4e/Twilight-2000-v4/logo.png" />
+	</div>
+	<br />
 	<h2>Attributes & Skills</h2>
+
+	<hr />
 
 	<input name="attr_strengthdie" type="hidden">
 	<input name="attr_heavyweaponsdie" type="hidden">
@@ -77,80 +88,221 @@
 
 	<div class="moddie-section">
 		<span>
-			<label>Die 1:</label><select name='attr_die1' class='sheet-short'><option value='12'>d12</option><option value='10'>d10</option><option value='8' selected="selected">d8</option><option value='6'>d6</option></select>
+			<label>Die 1</label>
+			<select name='attr_die1' class='sheet-short'>
+				<option value='12'>d12</option><option value='10'>d10</option>
+				<option value='8' selected="selected">d8</option>
+				<option value='6'>d6</option>
+			</select>
 		</span>
 		<span>
-			<label>Die 2:</label><select name='attr_die2' class='sheet-short'><option value='12'>d12</option><option value='10'>d10</option><option value='8' selected="selected">d8</option><option value='6'>d6</option></select>
+			<label>Die 2</label>
+			<select name='attr_die2' class='sheet-short'>
+				<option value=''></option>
+				<option value='12'>d12</option>
+				<option value='10'>d10</option>
+				<option value='8' selected="selected">d8</option>
+				<option value='6'>d6</option>
+			</select>
 		</span>
 		<span>
-			<label>Ammodice:</label><input type="number" name="attr_ammodice" />
+			<label>AmmoDice</label><input type="number" name="attr_ammodice" />
 		</span>
 		<span>
-			<h2>&nbsp;</h2>
+			<h3>&nbsp;</h3>
 			<button type='roll' name='roll_generaldice' value='&{template:default} {{name=@{character_name}}} {{result=[[(1d@{die1}cs>10cf<5>10f<5 + 1)+(1d@{die2}cs>10cf<5>10f<5 + 1)+@{ammodice}d6>6]]}}'></button>
 		</span>
 	</div>
-	<div class="row">
-		<p>&nbsp;</p>
-	</div>
-	<div class="row">
-		<p>&nbsp;</p>
-	</div>
+	<br />
+	<hr />
+
 	<div class="skill-section">
 	     <span>
-			<label>STRENGTH</label><select name='attr_strength' class='sheet-short'><option value='A'>A</option><option value='B'>B</option><option value='C' selected="selected">C</option><option value='D'>D</option></select>
-     			<button type='roll' name='roll_strength' value='&{template:default} {{name=@{character_name}}} {{result=[[(1d@{strenghtdie}cs>10cf<5>10f<5 + 1)]]}}'></button>
-			<br />&nbsp;<br />
-			<label>Heavy Weapons</label><select name='attr_heavyweapons' class='sheet-short'><option value=''></option><<option value='A'>A</option><option value='B'>B</option><option value='C'>C</option><option value='D'>D</option></select>
-        		<button type='roll' name='roll_heavyweapons' value='&{template:default} {{name=@{character_name}}} {{result=[[(1d@{heavyweaponsdie}cs>10cf<5>10f<5 + 1)+(1d@{strengthdie}cs>10cf<5>10f<5 + 1)]]}}'></button>
-			<br />&nbsp;<br />
-			<label>Close Combat</label><select name='attr_closecombat' class='sheet-short'><option value=''></option><<option value='A'>A</option><option value='B'>B</option><option value='C'>C</option><option value='D'>D</option></select>
-        		<button type='roll' name='roll_closecombat' value='&{template:default} {{name=@{character_name}}} {{result=[[(1d@{closecombatdie}cs>10cf<5>10f<5 + 1)+(1d@{strengthdie}cs>10cf<5>10f<5 + 1)]]}}'></button>
-			<br />&nbsp;<br />
-			<label>Stamina</label><select name='attr_stamina' class='sheet-short'><option value=''></option><<option value='A'>A</option><option value='B'>B</option><option value='C'>C</option><option value='D'>D</option></select>
+			<label>STRENGTH</label>
+			<select name='attr_strength' class='sheet-short'>
+				<option value='A'>A</option>
+				<option value='B'>B</option>
+				<option value='C' selected="selected">C</option>
+				<option value='D'>D</option>
+			</select>
+			<button type='roll' name='roll_strength' value='&{template:default} {{name=@{character_name}}} {{result=[[(1d@{strenghtdie}cs>10cf<5>10f<5 + 1)]]}}'></button>
+			<br />
+			<br />
+			
+			<label>Heavy Weapons</label>
+			<select name='attr_heavyweapons' class='sheet-short'>
+				<option value=''></option>
+				<option value='A'>A</option>
+				<option value='B'>B</option>
+				<option value='C'>C</option>
+				<option value='D'>D</option>
+			</select>
+			<button type='roll' name='roll_heavyweapons' value='&{template:default} {{name=@{character_name}}} {{result=[[(1d@{heavyweaponsdie}cs>10cf<5>10f<5 + 1)+(1d@{strengthdie}cs>10cf<5>10f<5 + 1)]]}}'></button>
+			<br />
+			<br />
+			
+			<label>Close Combat</label>
+			<select name='attr_closecombat' class='sheet-short'>
+				<option value=''></option>
+				<option value='A'>A</option>
+				<option value='B'>B</option>
+				<option value='C'>C</option>
+				<option value='D'>D</option>
+			</select>
+			<button type='roll' name='roll_closecombat' value='&{template:default} {{name=@{character_name}}} {{result=[[(1d@{closecombatdie}cs>10cf<5>10f<5 + 1)+(1d@{strengthdie}cs>10cf<5>10f<5 + 1)]]}}'></button>
+			<br />
+			<br />
+			
+			<label>Stamina</label>
+			<select name='attr_stamina' class='sheet-short'>
+				<option value=''></option>
+				<option value='A'>A</option>
+				<option value='B'>B</option>
+				<option value='C'>C</option>
+				<option value='D'>D</option>
+			</select>
         		<button type='roll' name='roll_stamina' value='&{template:default} {{name=@{character_name}}} {{result=[[(1d@{staminadie}cs>10cf<5>10f<5 + 1)+(1d@{strengthdie}cs>10cf<5>10f<5 + 1)]]}}'></button>
 			<hr />
 		</span>
 	     <span>
-			<label>AGILITY</label><select name='attr_agility' class='sheet-short'><option value='A'>A</option><option value='B'>B</option><option value='C' selected="selected">C</option><option value='D'>D</option></select>
-     			<button type='roll' name='roll_agility' value='&{template:default} {{name=@{character_name}}} {{result=[[(1d@{agilitydie}cs>10cf<5>10f<5 + 1)]]}}'></button>
-			<br />&nbsp;<br />
-			<label>Driving</label><select name='attr_driving' class='sheet-short'><option value=''></option><<option value='A'>A</option><option value='B'>B</option><option value='C'>C</option><option value='D'>D</option></select>
-        		<button type='roll' name='roll_driving' value='&{template:default} {{name=@{character_name}}} {{result=[[(1d@{drivingdie}cs>10cf<5>10f<5 + 1)+(1d@{agilitydie}cs>10cf<5>10f<5 + 1)]]}}'></button>
-			<br />&nbsp;<br />
-			<label>Mobility</label><select name='attr_mobility' class='sheet-short'><option value=''></option><<option value='A'>A</option><option value='B'>B</option><option value='C'>C</option><option value='D'>D</option></select>
-        		<button type='roll' name='roll_mobility' value='&{template:default} {{name=@{character_name}}} {{result=[[(1d@{mobilitydie}cs>10cf<5>10f<5 + 1)+(1d@{agilitydie}cs>10cf<5>10f<5 + 1)]]}}'></button>
-			<br />&nbsp;<br />
-			<label>Ranged Combat</label><select name='attr_rangedcombat' class='sheet-short'><option value=''></option><<option value='A'>A</option><option value='B'>B</option><option value='C'>C</option><option value='D'>D</option></select>
-        		<button type='roll' name='roll_rangedcombat' value='&{template:default} {{name=@{character_name}}} {{result=[[(1d@{rangedcombatdie}cs>10cf<5>10f<5 + 1)+(1d@{agilitydie}cs>10cf<5>10f<5 + 1)]]}}'></button>
+			<label>AGILITY</label>
+			<select name='attr_agility' class='sheet-short'>
+				<option value='A'>A</option>
+				<option value='B'>B</option>
+				<option value='C' selected="selected">C</option>
+				<option value='D'>D</option>
+			</select>
+			<button type='roll' name='roll_agility' value='&{template:default} {{name=@{character_name}}} {{result=[[(1d@{agilitydie}cs>10cf<5>10f<5 + 1)]]}}'></button>
+			<br />
+			<br />
+			
+			<label>Driving</label>
+			<select name='attr_driving' class='sheet-short'>
+				<option value=''></option>
+				<option value='A'>A</option>
+				<option value='B'>B</option>
+				<option value='C'>C</option>
+				<option value='D'>D</option>
+			</select>
+			<button type='roll' name='roll_driving' value='&{template:default} {{name=@{character_name}}} {{result=[[(1d@{drivingdie}cs>10cf<5>10f<5 + 1)+(1d@{agilitydie}cs>10cf<5>10f<5 + 1)]]}}'></button>
+			<br />
+			<br />
+			
+			<label>Mobility</label>
+			<select name='attr_mobility' class='sheet-short'>
+				<option value=''></option>
+				<option value='A'>A</option>
+				<option value='B'>B</option>
+				<option value='C'>C</option>
+				<option value='D'>D</option>
+			</select>
+			<button type='roll' name='roll_mobility' value='&{template:default} {{name=@{character_name}}} {{result=[[(1d@{mobilitydie}cs>10cf<5>10f<5 + 1)+(1d@{agilitydie}cs>10cf<5>10f<5 + 1)]]}}'></button>
+			<br />
+			<br />
+			
+			<label>Ranged Combat</label>
+			<select name='attr_rangedcombat' class='sheet-short'>
+				<option value=''></option>
+				<option value='A'>A</option>
+				<option value='B'>B</option>
+				<option value='C'>C</option>
+				<option value='D'>D</option>
+			</select>
+			<button type='roll' name='roll_rangedcombat' value='&{template:default} {{name=@{character_name}}} {{result=[[(1d@{rangedcombatdie}cs>10cf<5>10f<5 + 1)+(1d@{agilitydie}cs>10cf<5>10f<5 + 1)]]}}'></button>
 			<hr />
 		</span>
 	     <span>
-			<label>INTELLIGENCE</label><select name='attr_intelligence' class='sheet-short'><option value='A'>A</option><option value='B'>B</option><option value='C' selected="selected">C</option><option value='D'>D</option></select>
-     			<button type='roll' name='roll_intelligence' value='&{template:default} {{name=@{character_name}}} {{result=[[(1d@{intelligencedie}cs>10cf<5>10f<5 + 1)]]}}'></button>
-			<br />&nbsp;<br />
-			<label>Recon</label><select name='attr_recon' class='sheet-short'><option value=''></option><<option value='A'>A</option><option value='B'>B</option><option value='C'>C</option><option value='D'>D</option></select>
-        		<button type='roll' name='roll_recon' value='&{template:default} {{name=@{character_name}}} {{result=[[1d@{recondie}>6cs>10+(1d@{intelligencedie}cs>10cf<5>10f<5 + 1)]]}}'></button>
-			<br />&nbsp;<br />
-			<label>Survival</label><select name='attr_survival' class='sheet-short'><option value=''></option><<option value='A'>A</option><option value='B'>B</option><option value='C'>C</option><option value='D'>D</option></select>
-        		<button type='roll' name='roll_survival' value='&{template:default} {{name=@{character_name}}} {{result=[[1d@{survivaldie}>6cs>10+(1d@{intelligencedie}cs>10cf<5>10f<5 + 1)]]}}'></button>
-			<br />&nbsp;<br />
-			<label>Tech</label><select name='attr_tech' class='sheet-short'><option value=''></option><<option value='A'>A</option><option value='B'>B</option><option value='C'>C</option><option value='D'>D</option></select>
-        		<button type='roll' name='roll_tech' value='&{template:default} {{name=@{character_name}}} {{result=[[(1d@{techdie}cs>10cf<5>10f<5 + 1)+(1d@{intelligencedie}cs>10cf<5>10f<5 + 1)]]}}'></button>
+			<label>INTELLIGENCE</label>
+			<select name='attr_intelligence' class='sheet-short'>
+				<option value='A'>A</option>
+				<option value='B'>B</option>
+				<option value='C' selected="selected">C</option>
+				<option value='D'>D</option>
+			</select>
+			<button type='roll' name='roll_intelligence' value='&{template:default} {{name=@{character_name}}} {{result=[[(1d@{intelligencedie}cs>10cf<5>10f<5 + 1)]]}}'></button>
+			<br />
+			<br />
+			
+			<label>Recon</label>
+			<select name='attr_recon' class='sheet-short'>
+				<option value=''></option>
+				<option value='A'>A</option>
+				<option value='B'>B</option>
+				<option value='C'>C</option>
+				<option value='D'>D</option>
+			</select>
+			<button type='roll' name='roll_recon' value='&{template:default} {{name=@{character_name}}} {{result=[[1d@{recondie}>6cs>10+(1d@{intelligencedie}cs>10cf<5>10f<5 + 1)]]}}'></button>
+			<br />
+			<br />
+			
+			<label>Survival</label>
+			<select name='attr_survival' class='sheet-short'>
+				<option value=''></option>
+				<option value='A'>A</option>
+				<option value='B'>B</option>
+				<option value='C'>C</option>
+				<option value='D'>D</option>
+			</select>
+			<button type='roll' name='roll_survival' value='&{template:default} {{name=@{character_name}}} {{result=[[1d@{survivaldie}>6cs>10+(1d@{intelligencedie}cs>10cf<5>10f<5 + 1)]]}}'></button>
+			<br />
+			<br />
+			
+			<label>Tech</label>
+			<select name='attr_tech' class='sheet-short'>
+				<option value=''></option>
+				<option value='A'>A</option>
+				<option value='B'>B</option>
+				<option value='C'>C</option>
+				<option value='D'>D</option>
+			</select>
+			<button type='roll' name='roll_tech' value='&{template:default} {{name=@{character_name}}} {{result=[[(1d@{techdie}cs>10cf<5>10f<5 + 1)+(1d@{intelligencedie}cs>10cf<5>10f<5 + 1)]]}}'></button>
 			<hr />
 		</span>
 	     <span>
-			<label>EMPATHY</label><select name='attr_empathy' class='sheet-short'><option value='A'>A</option><option value='B'>B</option><option value='C' selected="selected">C</option><option value='D'>D</option></select>
-     			<button type='roll' name='roll_empathy' value='&{template:default} {{name=@{character_name}}} {{result=[[(1d@{empathydie}cs>10cf<5>10f<5 + 1)]]}}'></button>
-			<br />&nbsp;<br />
-			<label>Command</label><select name='attr_command' class='sheet-short'><option value=''></option><<option value='A'>A</option><option value='B'>B</option><option value='C'>C</option><option value='D'>D</option></select>
-        		<button type='roll' name='roll_command' value='&{template:default} {{name=@{character_name}}} {{result=[[(1d@{commanddie}cs>10cf<5>10f<5 + 1)+(1d@{empathydie}cs>10cf<5>10f<5 + 1)]]}}'></button>
-			<br />&nbsp;<br />
-			<label>Persuasion</label><select name='attr_persuasion' class='sheet-short'><option value=''></option><<option value='A'>A</option><option value='B'>B</option><option value='C'>C</option><option value='D'>D</option></select>
-        		<button type='roll' name='roll_persuasion' value='&{template:default} {{name=@{character_name}}} {{result=[[(1d@{persuasiondie}cs>10cf<5>10f<5 + 1)+(1d@{empathydie}cs>10cf<5>10f<5 + 1)]]}}'></button>
-			<br />&nbsp;<br />
-			<label>Medical Aid</label><select name='attr_medicalaid' class='sheet-short'><option value=''></option><<option value='A'>A</option><option value='B'>B</option><option value='C'>C</option><option value='D'>D</option></select>
-        		<button type='roll' name='roll_medicalaid' value='&{template:default} {{name=@{character_name}}} {{result=[[(1d@{medicalaiddie}cs>10cf<5>10f<5 + 1)+(1d@{empathydie}cs>10cf<5>10f<5 + 1)]]}}'></button>
+			<label>EMPATHY</label>
+			<select name='attr_empathy' class='sheet-short'>
+				<option value='A'>A</option>
+				<option value='B'>B</option>
+				<option value='C' selected="selected">C</option>
+				<option value='D'>D</option>
+			</select>
+			<button type='roll' name='roll_empathy' value='&{template:default} {{name=@{character_name}}} {{result=[[(1d@{empathydie}cs>10cf<5>10f<5 + 1)]]}}'></button>
+			<br />
+			<br />
+			
+			<label>Command</label>
+			<select name='attr_command' class='sheet-short'>
+				<option value=''></option>
+				<option value='A'>A</option>
+				<option value='B'>B</option>
+				<option value='C'>C</option>
+				<option value='D'>D</option>
+			</select>
+			<button type='roll' name='roll_command' value='&{template:default} {{name=@{character_name}}} {{result=[[(1d@{commanddie}cs>10cf<5>10f<5 + 1)+(1d@{empathydie}cs>10cf<5>10f<5 + 1)]]}}'></button>
+			<br />
+			<br />
+			
+			<label>Persuasion</label>
+			<select name='attr_persuasion' class='sheet-short'>
+				<option value=''></option>
+				<option value='A'>A</option>
+				<option value='B'>B</option>
+				<option value='C'>C</option>
+				<option value='D'>D</option>
+			</select>
+			<button type='roll' name='roll_persuasion' value='&{template:default} {{name=@{character_name}}} {{result=[[(1d@{persuasiondie}cs>10cf<5>10f<5 + 1)+(1d@{empathydie}cs>10cf<5>10f<5 + 1)]]}}'></button>
+			<br />
+			<br />
+			
+			<label>Medical Aid</label>
+			<select name='attr_medicalaid' class='sheet-short'>
+				<option value=''></option>
+				<option value='A'>A</option>
+				<option value='B'>B</option>
+				<option value='C'>C</option>
+				<option value='D'>D</option>
+			</select>
+			<button type='roll' name='roll_medicalaid' value='&{template:default} {{name=@{character_name}}} {{result=[[(1d@{medicalaiddie}cs>10cf<5>10f<5 + 1)+(1d@{empathydie}cs>10cf<5>10f<5 + 1)]]}}'></button>
 			<hr />
 		</span>
 	</div>
@@ -166,38 +318,53 @@
 	<div class="row">
           <img src="https://raw.githubusercontent.com/Puckohue/roll20-character-sheets/t2k4e/Twilight-2000-v4/logo.png" />
      </div>
-	<br>&nbsp;</br>
+	<br />
+
 	<h2>Combat</h2>
+
+	<hr />
+
 	<div class="3colrow">
 		<div class="col">
-			<h3>&nbsp;</h3>
-			<label>Damage:</label><input type="number" name="attr_damage" />
-			<p>&nbsp;</p>
-			<label>Hit Capacity:</label><input type="number" name="attr_hitcapacity" value="ceil((@{strengthdie}+@{agilitydie})/4)" disabled="true" />
+			<label>Damage</label><input type="number" name="attr_damage" />
+			<br /><br />
+			<label>Hit Capacity</label><input type="number" name="attr_hitcapacity" value="ceil((@{strengthdie}+@{agilitydie})/4)" disabled="true" />
 		</div>
 		<div class="col">
-			<h3>&nbsp;</h3>
-			<label>Stress:</label><input type="number" name="attr_stress" />
-			<p>&nbsp;</p>
-			<label>Stress Capacity:</label><input type="number" name="attr_stresscapacity" value="ceil((@{intelligencedie}+@{empathydie})/4)" disabled="true" />
+			<label>Stress</label><input type="number" name="attr_stress" />
+			<br /><br />
+			<label>Stress Capacity</label><input type="number" name="attr_stresscapacity" value="ceil((@{intelligencedie}+@{empathydie})/4)" disabled="true" />
 		</div>
 		<div class="col">
-			<p>&nbsp;</p>
+
 		</div>
 	</div>
 	<hr />
 	<div class="moddie-section">
 		<span>
-			<label>Die 1:</label><select name='attr_die1' class='sheet-short'><option value='12'>d12</option><option value='10'>d10</option><option value='8' selected="selected">d8</option><option value='6'>d6</option></select>
+			<label>Die 1</label>
+			<select name='attr_die1' class='sheet-short'>
+				<option value='12'>d12</option>
+				<option value='10'>d10</option>
+				<option value='8' selected="selected">d8</option>
+				<option value='6'>d6</option>
+			</select>
 		</span>
 		<span>
-			<label>Die 2:</label><select name='attr_die2' class='sheet-short'><option value='12'>d12</option><option value='10'>d10</option><option value='8' selected="selected">d8</option><option value='6'>d6</option></select>
+			<label>Die 2</label>
+			<select name='attr_die2' class='sheet-short'>
+				<option value=''></option>
+				<option value='12'>d12</option>
+				<option value='10'>d10</option>
+				<option value='8' selected="selected">d8</option>
+				<option value='6'>d6</option>
+			</select>
 		</span>
 		<span>
-			<label>Ammodice:</label><input type="number" name="attr_ammodice" />
+			<label>AmmoDice</label><input type="number" name="attr_ammodice" />
 		</span>
 		<span>
-			<h2>&nbsp;</h2>
+			<h3>&nbsp;</h3>
 			<button type='roll' name='roll_generaldice' value='&{template:default} {{name=@{character_name}}} {{result=[[(1d@{die1}cs>10cf<5>10f<5 + 1)+(1d@{die2}cs>10cf<5>10f<5 + 1)+@{ammodice}d6>6]]}}'></button>
 		</span>
 	</div>
@@ -209,18 +376,26 @@
 	</div>
 	<div class="3colrow">
 		<div class="col">
-			<label>Ranged Combat</label><button type='roll' name='roll_rangedcombat' value='&{template:default} {{name=@{character_name}}} {{result=[[(1d@{rangedcombatdie}cs>10cf<5>10f<5 + 1)+(1d@{agilitydie}cs>10cf<5>10f<5 + 1)+?{Number of Ammodice|1}d6>6]]}}'></button>
+			<span class="lesserLabel">Ranged Combat </span><button type='roll' name='roll_rangedcombat' value='&{template:default} {{name=@{character_name}}} {{result=[[(1d@{rangedcombatdie}cs>10cf<5>10f<5 + 1)+(1d@{agilitydie}cs>10cf<5>10f<5 + 1)+?{Number of Ammodice|1}d6>6]]}}'></button>
 		</div>
 		<div class="col">
-			<label>Close Combat</label><button type='roll' name='roll_closecombat' value='&{template:default} {{name=@{character_name}}} {{result=[[1d@{closecombatdie}>6cs>10+1d@{strengthdie}>6cs>10]]}}'></button>
+			<span class="lesserLabel">Close Combat </span><button type='roll' name='roll_closecombat' value='&{template:default} {{name=@{character_name}}} {{result=[[1d@{closecombatdie}>6cs>10+1d@{strengthdie}>6cs>10]]}}'></button>
 		</div>
 		<div class="col">
-			<label>CUF</label><select name='attr_CUF' class='sheet-short'><option value=''></option><<option value='A'>A</option><option value='B'>B</option><option value='C'>C</option><option value='D'>D</option></select>
+			<span class="lesserLabel">CUF </span>
+			<select name='attr_CUF' class='sheet-short'>
+				<option value=''></option><
+				<option value='A'>A</option>
+				<option value='B'>B</option>
+				<option value='C'>C</option>
+				<option value='D'>D</option>
+			</select>
 		</div>
 	</div>
 	<div class="row">
 		<h3>Weapons</h3>
 		<div class="weapon-section">
+			<span>Name</span>
 			<span>Type</span>
 			<span>Ammo</span>
 			<span>RoF</span>
@@ -238,42 +413,64 @@
 	<div class="row">
 		<fieldset class="repeating_weapons">
 			<div class="weapon-section">
- 				<span><input type="text" name="attr_weapon_type" /></span>
-				<span><input type="text" name="attr_weapon_ammotype" /></span>
-				<span><input type="text" name="attr_weapon_rof" /></span>
-				<span><input type="text" name="attr_weapon_damage" /></span>
-				<span><input type="text" name="attr_weapon_crit" /></span>
-				<span><input type="text" name="attr_weapon_armor" /></span>
-				<span><input type="text" name="attr_weapon_reliability" /></span>
-				<span><input type="text" name="attr_weapon_range" /></span>
-				<span><input type="text" name="attr_weapon_blast" /></span>
-				<span><input type="text" name="attr_weapon_weight" /></span>
-				<span><input type="text" name="attr_weapon_mag" /></span>
-				<span><input type="text" name="attr_weapon_spent_ammo" /></span>
+				<input type="text" name="attr_weapon_name" />
+				<select name='attr_weapon_type' class='sheet-short'>
+					<option value=''></option><
+					<option value='SMG'>SMG</option>
+					<option value='LMG'>LMG</option>
+					<option value='GPMG'>GPMG</option>
+					<option value='HMG'>HMG</option>
+					<option value='GL'>GL</option>
+					<option value='RL'>RL</option>
+					<option value='ATRL'>ATRL</option>
+					<option value='ATGM'>ATGM</option>
+				</select>
+				<input type="number" name="attr_weapon_ammotype" />
+				<input type="number" name="attr_weapon_rof" />
+				<input type="number" name="attr_weapon_damage" />
+				<input type="number" name="attr_weapon_crit" />
+				<input type="number" name="attr_weapon_armor" />
+				<select name='attr_weapon_reliability' class='sheet-short'>
+					<option value=''></option>
+					<option value='A'>A</option>
+					<option value='B'>B</option>
+					<option value='C'>C</option>
+					<option value='D'>D</option>
+				</select>
+				<input type="number" name="attr_weapon_range" />
+				<input type="number" name="attr_weapon_blast" />
+				<input type="number" name="attr_weapon_weight" />
+				<input type="number" name="attr_weapon_mag" />
+				<input type="number" name="attr_weapon_spent_ammo" />
 			</div>
 		</fieldset>
 	</div>
+
+	<hr />
+
 	<div class="row">
-		<hr />
 		<h3>Armor</h3>
-		<fieldset class="repeating_armor">
-			<div class="3colrow">
-				<div class="col">
-					<label>Location:</label><select name="attr_armorbodypart">
- 					<option value="Head" selected="selected">Head</option>
- 					<option value="Arms">Arms</option>
- 					<option value="Torso">Torso</option>
- 					<option value="Legs">Legs</option>
+		<div class="armor-section">
+			<span>Location</span>
+			<span>Name</span>
+			<span>Rating</span>
+			<span>Weight</span>
+		</div>
+		<div class="row">
+			<fieldset class="repeating_armor">
+				<div class="armor-section">
+					<select name="attr_armorbodypart">
+						<option value="Head" selected="selected">Head</option>
+						<option value="Arms">Arms</option>
+						<option value="Torso">Torso</option>
+						<option value="Legs">Legs</option>
 					</select>
+					<input type="text" name="attr_armorname" />
+					<input type="number" name="attr_armorrating" />
+					<input type="number" name="attr_armorweight" />
 				</div>
-				<div class="col">
-					<label>Type:</label><input type="text" name="attr_armortype" />
-				</div>
-				<div class="col">
-					<label>Rating:</label><input type="number" name="attr_armorrating" />
-				</div>
-			</div>
-		</fieldset>
+			</fieldset>
+		</div>
 	</div>
 	<hr />
 	<div class="3colrow">
@@ -291,9 +488,13 @@
 		</div>
 			<div class="col">
 			<h3>Radiation</h3>
-			<label>Temporary:</label><input type="number" name="attr_temporaryradiation" />
-			<p>&nbsp;</p>
-			<label>Permanent:</label><input type="number" name="attr_permanentradiation" />
+			<p class="lesserLabel">
+				<strong>Temporary </strong><input type="number" name="attr_temporaryradiation" />
+			</p>
+			<p class="lesserLabel">
+				<strong>Permanent </strong><input type="number" name="attr_permanentradiation" />
+			</p>
+			<br />
 		</div>
 	</div>
 </div>
@@ -302,14 +503,17 @@
 	<div class="row">
           <img src="https://raw.githubusercontent.com/Puckohue/roll20-character-sheets/t2k4e/Twilight-2000-v4/logo.png" />
      </div>
-	<br>&nbsp;</br>
+	<br />
 	<h2>Gear</h2>
+
+	<hr />
+
 	<div class="2colrow">
 		<div class="col">
 			<h3>Combat Gear</h3>
-			<p>Carry Limit: <span name="attr_strengthdie"></span></p>
-			<p><strong>Bonus:</strong><input type="number" name="attr_combatgearbonus" /></p>
-			<p><strong>Total ENC:</strong><span name="attr_combatgear_total"></span></p>
+			<p class="lesserLabel">Carry Limit <span name="attr_strengthdie"></span></p>
+			<p class="lesserLabel"><strong>Bonus </strong><input type="number" name="attr_combatgearbonus" /></p>
+			<p class="lesserLabel"><strong>Total ENC </strong><span name="attr_combatgear_total"></span></p>
 			<p>&nbsp;</p>
 			<div class="combatgear-section">
 				<span><h4>Item</h4></span>
@@ -328,9 +532,9 @@
 		</div>
 		<div class="col">
 			<h3>Backpack</h3>
-			<p>Carry Limit: <span name="attr_strengthdie"></span></p>
-			<p><strong>Bonus:</strong><input type="number" name="attr_backpackbonus" /></p>
-			<p><strong>Total ENC:</strong><span name="attr_backpack_total"></span></p>
+			<p class="lesserLabel">Carry Limit <span name="attr_strengthdie"></span></p>
+			<p class="lesserLabel"><strong>Bonus </strong><input type="number" name="attr_backpackbonus" /></p>
+			<p class="lesserLabel"><strong>Total ENC </strong><span name="attr_backpack_total"></span></p>
 			<p>&nbsp;</p>
 			<div class="combatgear-section">
 				<span><h4>Item</h4></span>
@@ -348,12 +552,16 @@
 			</fieldset>
 		</div>
 	</div>
+	<br />
+	<hr />
+
 	<div class="row">
 		<h3>Tiny Items</h3>
 		<fieldset class="repeating_tinyitems">
 			<input type="text" name="attr_tinyitem" />
 		</fieldset>
 	</div>
+	<br /><br />
 </div>
 
 
@@ -366,9 +574,7 @@
             });
         });
     });
-</script>
 
-<script type="text/worker">
 	on("change:strength sheet:opened", function() {  
 		getAttrs(["strength"], function(values) {
         		const str = values.strength;
@@ -380,8 +586,7 @@
 			setAttrs({strengthdie: strdie});
 		});
 	});
-</script>
-<script type="text/worker">
+
 	on("change:heavyweapons sheet:opened", function() {  
 		getAttrs(["heavyweapons"], function(values) {
         		const hvy = values.heavyweapons;
@@ -393,8 +598,7 @@
 			setAttrs({heavyweaponsdie: hvydie });
 		});
 	});
-</script>
-<script type="text/worker">
+
 	on("change:closecombat sheet:opened", function() {  
 		getAttrs(["closecombat"], function(values) {
         		const cls = values.closecombat;
@@ -406,8 +610,7 @@
 			setAttrs({closecombatdie: clsdie });
 		});
 	});
-</script>
-<script type="text/worker">
+
 	on("change:stamina sheet:opened", function() {  
 		getAttrs(["stamina"], function(values) {
         		const sta = values.stamina;
@@ -419,8 +622,7 @@
 			setAttrs({staminadie: stadie });
 		});
 	});
-</script>
-<script type="text/worker">
+
 	on("change:agility sheet:opened", function() {  
 		getAttrs(["agility"], function(values) {
         		const agi = values.agility;
@@ -432,8 +634,7 @@
 			setAttrs({agilitydie: agidie });
 		});
 	});
-</script>
-<script type="text/worker">
+
 	on("change:driving sheet:opened", function() {  
 		getAttrs(["driving"], function(values) {
         		const dri = values.driving;
@@ -445,8 +646,7 @@
 			setAttrs({drivingdie: dridie });
 		});
 	});
-</script>
-<script type="text/worker">
+
 	on("change:mobility sheet:opened", function() {  
 		getAttrs(["mobility"], function(values) {
         		const mob = values.mobility;
@@ -458,8 +658,7 @@
 			setAttrs({mobilitydie: mobdie });
 		});
 	});
-</script>
-<script type="text/worker">
+
 	on("change:rangedcombat sheet:opened", function() {  
 		getAttrs(["rangedcombat"], function(values) {
         		const ran = values.rangedcombat;
@@ -471,8 +670,7 @@
 			setAttrs({rangedcombatdie: randie });
 		});
 	});
-</script>
-<script type="text/worker">
+
 	on("change:intelligence sheet:opened", function() {  
 		getAttrs(["intelligence"], function(values) {
         		const int = values.intelligence;
@@ -484,8 +682,7 @@
 			setAttrs({intelligencedie: intdie });
 		});
 	});
-</script>
-<script type="text/worker">
+
 	on("change:recon sheet:opened", function() {  
 		getAttrs(["recon"], function(values) {
         		const rec = values.recon;
@@ -497,8 +694,7 @@
 			setAttrs({recondie: recdie });
 		});
 	});
-</script>
-<script type="text/worker">
+
 	on("change:survival sheet:opened", function() {  
 		getAttrs(["survival"], function(values) {
         		const sur = values.survival;
@@ -510,8 +706,7 @@
 			setAttrs({survivaldie: surdie });
 		});
 	});
-</script>
-<script type="text/worker">
+
 	on("change:tech sheet:opened", function() {  
 		getAttrs(["tech"], function(values) {
         		const tec = values.tech;
@@ -523,8 +718,7 @@
 			setAttrs({techdie: tecdie });
 		});
 	});
-</script>
-<script type="text/worker">
+
 	on("change:empathy sheet:opened", function() {  
 		getAttrs(["empathy"], function(values) {
         		const emp = values.empathy;
@@ -536,8 +730,7 @@
 			setAttrs({empathydie: empdie });
 		});
 	});
-</script>
-<script type="text/worker">
+
 	on("change:command sheet:opened", function() {  
 		getAttrs(["command"], function(values) {
         		const com = values.command;
@@ -549,8 +742,7 @@
 			setAttrs({commanddie: comdie });
 		});
 	});
-</script>
-<script type="text/worker">
+
 	on("change:persuasion sheet:opened", function() {  
 		getAttrs(["persuasion"], function(values) {
         		const per = values.persuasion;
@@ -562,8 +754,7 @@
 			setAttrs({persuasiondie: perdie });
 		});
 	});
-</script>
-<script type="text/worker">
+
 	on("change:medicalaid sheet:opened", function() {  
 		getAttrs(["medicalaid"], function(values) {
         		const med = values.medicalaid;
@@ -575,9 +766,7 @@
 			setAttrs({medicalaiddie: meddie });
 		});
 	});
-</script>
 
-<script type="text/worker">
 	on('change:repeating_combatgearitems:combatgearweight remove:repeating_combatgearitems', function() {
 		repeatingSum("combatgear_total","combatgearitems","combatgearweight");
 	});
@@ -586,29 +775,29 @@
 		repeatingSum("backpack_total","backpackitems","backpackweight");
 	});
 
-/* ===== PARAMETERS ==========
-destinations = the name of the attribute that stores the total quantity
-        can be a single attribute, or an array: ['total_cost', 'total_weight']
-        If more than one, the matching fields must be in the same order. 
-    section = name of repeating fieldset, without the repeating_
-    fields = the name of the attribute field to be summed
-          destination and fields both can be a single attribute: 'weight'
-          or an array of attributes: ['weight','number','equipped']
-*/
-const repeatingSum = (destinations, section, fields) => {
-    if (!Array.isArray(destinations)) destinations = [destinations.replace(/\s/g, '').split(',')];
-    if (!Array.isArray(fields)) fields = [fields.replace(/\s/g, '').split(',')];
-    getSectionIDs(`repeating_${section}`, idArray => {
-        const attrArray = idArray.reduce((m, id) => [...m, ...(fields.map(field => `repeating_${section}_${id}_${field}`))], []);
-        getAttrs([...attrArray], v => {
-            const getValue = (section, id, field) => v[`repeating_${section}_${id}_${field}`] === 'on' ? 1 : parseFloat(v[`repeating_${section}_${id}_${field}`]) || 0;
-            const commonMultipliers = (fields.length <= destinations.length) ? [] : fields.splice(destinations.length, fields.length - destinations.length);
-            const output = {};
-            destinations.forEach((destination, index) => {
-                output[destination] = idArray.reduce((total, id) => total + getValue(section, id, fields[index]) * commonMultipliers.reduce((subtotal, mult) => subtotal * getValue(section, id, mult), 1), 0);
-            });
-            setAttrs(output);
-        }); 
-    }); 
-};
+	/* ===== PARAMETERS ==========
+		destinations = the name of the attribute that stores the total quantity
+		can be a single attribute, or an array: ['total_cost', 'total_weight']
+		If more than one, the matching fields must be in the same order. 
+		section = name of repeating fieldset, without the repeating_
+		fields = the name of the attribute field to be summed
+		destination and fields both can be a single attribute: 'weight'
+		or an array of attributes: ['weight','number','equipped']
+	*/
+	const repeatingSum = (destinations, section, fields) => {
+		if (!Array.isArray(destinations)) destinations = [destinations.replace(/\s/g, '').split(',')];
+		if (!Array.isArray(fields)) fields = [fields.replace(/\s/g, '').split(',')];
+		getSectionIDs(`repeating_${section}`, idArray => {
+			const attrArray = idArray.reduce((m, id) => [...m, ...(fields.map(field => `repeating_${section}_${id}_${field}`))], []);
+			getAttrs([...attrArray], v => {
+				const getValue = (section, id, field) => v[`repeating_${section}_${id}_${field}`] === 'on' ? 1 : parseFloat(v[`repeating_${section}_${id}_${field}`]) || 0;
+				const commonMultipliers = (fields.length <= destinations.length) ? [] : fields.splice(destinations.length, fields.length - destinations.length);
+				const output = {};
+				destinations.forEach((destination, index) => {
+					output[destination] = idArray.reduce((total, id) => total + getValue(section, id, fields[index]) * commonMultipliers.reduce((subtotal, mult) => subtotal * getValue(section, id, mult), 1), 0);
+				});
+				setAttrs(output);
+			}); 
+		}); 
+	};
 </script>
