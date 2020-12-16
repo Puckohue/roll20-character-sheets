@@ -7,6 +7,9 @@ Created by Jacob Andersson
 * Calcualtes encumbrance total
 
 # To Do
+* Multiple successes on the d10 or d12 dice rolls (when you roll a 10 or higher on either dice)
+* Moving hit capacity / stress capacity higher up, at the top of the 'combat & health' tab.
+* calculate your hit capacity and stress capacity correctly
 * Improve the general design and look
 * Add hit location roll
 * Roll templates
