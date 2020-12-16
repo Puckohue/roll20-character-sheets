@@ -1,5 +1,6 @@
 # Twilight 2000 4th edition (Alpha) Character Sheet
 Created by Jacob Andersson
+Additional layout, fixes, code snippets etc by nocFenix, Oosh, Ian, and others
 
 # Features
 * Attribute and skill rolls
