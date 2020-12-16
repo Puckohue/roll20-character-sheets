@@ -1,8 +1,8 @@
 /* Set the min-width so that when the window is resized the look will stay consistant */
 
 .charsheet {
-  background-color: #ebe3d1;
-  min-width: 800px;
+	background-color: #ebe3d1;
+	min-width: 800px;
 }
 
 /* Universal styling applied to all elements of these types */
@@ -10,10 +10,23 @@
 h2 {
 	font-size: 2em;
 	margin-bottom: 10px;
+	color: #877d70;
+	font-family: 'Stencil Std', fantasy;
+}
+
+h3, h4, .sheet-lesserLabel {
+	color: #877d70;
+	font-family: 'Stencil Std', fantasy;
+}
+
+hr {
+	border-top: 3px solid #877d70;
 }
 
 label {
 	display: inline-block;
+	color: #877d70;
+	font-family: 'Stencil Std', fantasy;
 }
 
 input {
@@ -37,6 +50,7 @@ input.sheet-short {
 
 select.sheet-short {
 	width: 50px;
+    appearance: none;
 }
 
 select.sheet-dtype {
@@ -58,19 +72,40 @@ span.sheet-dee {
   grid-template-columns: 175px 175px 175px 175px;
 }
 
-.sheet-moddie-section{
+.sheet-moddie-section {
   display: grid;
-  grid-template-columns: 100px 100px 75px;
+  grid-template-columns: 75px 75px 50px 50px;
   grid-template-rows: 40px;
 }
 
-.sheet-weapon-section{
+.sheet-weapon-section {
   display: grid;
-  grid-template-columns: 100px 100px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px;
+  grid-template-columns: 175px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px;
   grid-template-rows: 40px;
+  font-size: 11px;
+}
+.sheet-weapon-section span, .sheet-armor-section span {
+	color: #877d70;
+	font-family: 'Stencil Std', fantasy;
+}
+.sheet-weapon-section select.sheet-short {
+	width: 3.5em;
+	height: 40px;
 }
 
-.sheet-combatgear-section{
+.sheet-armor-section {
+	display: grid;
+	grid-template-columns: 80px 175px 50px 50px;
+	grid-template-rows: 40px;
+	font-size: 11px;
+}
+.sheet-armor-section select {
+	height: 40px;
+	width: 75px;
+	appearance: none;
+}
+
+.sheet-combatgear-section {
   display: grid;
   grid-template-columns: 175px 50px;
   grid-template-rows: 40px;
@@ -108,4 +143,11 @@ span.sheet-dee {
 .sheet-tabstoggle[value="combat"] ~ div.sheet-combat,
 .sheet-tabstoggle[value="gear"] ~ div.sheet-gear {
 	display: block;
+}
+
+button[type=action] {
+	color: #fff;
+	font-family: 'Stencil Std', fantasy;
+	background-color: #877d70;
+	border: #877d70;
 }
