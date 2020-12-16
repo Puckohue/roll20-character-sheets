@@ -83,7 +83,11 @@
 			<label>Die 2:</label><select name='attr_die2' class='sheet-short'><option value='12'>d12</option><option value='10'>d10</option><option value='8' selected="selected">d8</option><option value='6'>d6</option></select>
 		</span>
 		<span>
-			<label>Ammodice:</label><input type="number" name="attr_ammodice" /><button type='roll' name='roll_generaldice' value='&{template:default} {{name=@{character_name}}} {{result=[[1d@{die1}>6+1d@{die2}>6+@{ammodice}d6>6]]}}'></button>
+			<label>Ammodice:</label><input type="number" name="attr_ammodice" />
+		</span>
+		<span>
+			<h2>&nbsp;</h2>
+			<button type='roll' name='roll_generaldice' value='&{template:default} {{name=@{character_name}}} {{result=[[1d@{die1}>6>cs10+1d@{die2}>6>cs10+@{ammodice}d6>6]]}}'></button>
 		</span>
 	</div>
 	<p>&nbsp;</p>
@@ -159,6 +163,24 @@
      </div>
 	<br>&nbsp;</br>
 	<h2>Combat</h2>
+	<div class="3colrow">
+		<div class="col">
+			<h3>&nbsp;</h3>
+			<label>Damage:</label><input type="number" name="attr_damage" />
+			<p>&nbsp;</p>
+			<label>Hit Capacity:</label><input type="number" name="attr_hitcapacity" value="ceil((@{strengthdie}+@{agilitydie})/4)" disabled="true" />
+		</div>
+		<div class="col">
+			<h3>&nbsp;</h3>
+			<label>Stress:</label><input type="number" name="attr_stress" />
+			<p>&nbsp;</p>
+			<label>Stress Capacity:</label><input type="number" name="attr_stresscapacity" value="ceil((@{intelligencedie}+@{empathydie})/4)" disabled="true" />
+		</div>
+		<div class="col">
+			<p>&nbsp;</p>
+		</div>
+	</div>
+	<hr />
 	<div class="moddie-section">
 		<span>
 			<label>Die 1:</label><select name='attr_die1' class='sheet-short'><option value='12'>d12</option><option value='10'>d10</option><option value='8' selected="selected">d8</option><option value='6'>d6</option></select>
@@ -167,7 +189,10 @@
 			<label>Die 2:</label><select name='attr_die2' class='sheet-short'><option value='12'>d12</option><option value='10'>d10</option><option value='8' selected="selected">d8</option><option value='6'>d6</option></select>
 		</span>
 		<span>
-			<label>Ammodice:</label><input type="number" name="attr_ammodice" /><button type='roll' name='roll_generaldice' value='&{template:default} {{name=@{character_name}}} {{result=[[1d@{die1}>6+1d@{die2}>6+@{ammodice}d6>6]]}}'></button>
+			<label>Ammodice:</label><input type="number" name="attr_ammodice" />
+		</span>
+		<span>
+			<button type='roll' name='roll_generaldice' value='&{template:default} {{name=@{character_name}}} {{result=[[1d@{die1}>6cs>10+1d@{die2}>6cs>10+@{ammodice}d6>6]]}}'></button>
 		</span>
 	</div>
 	<p>&nbsp;</p>
@@ -242,27 +267,6 @@
 	<hr />
 	<div class="3colrow">
 		<div class="col">
-			<h3>&nbsp;</h3>
-			<label>Damage:</label><input type="number" name="attr_damage" />
-			<p>&nbsp;</p>
-			<label>Hit Capacity:</label><input type="number" name="attr_hitcapacity" value="((@{strengthdie}+@{agilitydie})/2)" disabled="true" />
-		</div>
-		<div class="col">
-			<h3>&nbsp;</h3>
-			<label>Stress:</label><input type="number" name="attr_stress" />
-			<p>&nbsp;</p>
-			<label>Stress Capacity:</label><input type="number" name="attr_stresscapacity" value="((@{intelligencedie}+@{empathydie})/2)" disabled="true" />
-		</div>
-		<div class="col">
-			<h3>Radiation</h3>
-			<label>Temporary:</label><input type="number" name="attr_temporaryradiation" />
-			<p>&nbsp;</p>
-			<label>Permanent:</label><input type="number" name="attr_permanentradiation" />
-		</div>
-	</div>
-	<hr />
-	<div class="2colrow">
-		<div class="col">
 			<h3>Critical Injuries</h3>
 			<fieldset class="repeating_criticalinjuries"> 
 				<textarea name="attr_criticalinjury"></textarea>
@@ -273,6 +277,12 @@
 			<fieldset class="repeating_diseases"> 
 				<textarea name="attr_disease"></textarea>
 			</fieldset>
+		</div>
+			<div class="col">
+			<h3>Radiation</h3>
+			<label>Temporary:</label><input type="number" name="attr_temporaryradiation" />
+			<p>&nbsp;</p>
+			<label>Permanent:</label><input type="number" name="attr_permanentradiation" />
 		</div>
 	</div>
 </div>
