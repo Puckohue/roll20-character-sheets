@@ -10,6 +10,9 @@ Created by Jacob Andersson
 * Improve the general design and look
 * Add hit location roll
 * Roll templates
+* Vehicle tab
+* Stockpile tab
+* Charactermancer for character creation
 
 # Done
 ## 2020-12-15
@@ -20,3 +23,4 @@ Created by Jacob Andersson
 * Calculate hit capacity and stress capacity correctly
 * Made "Multiple successes" on the d10 or d12 dice rolls (when you roll a 10 or higher on either dice) display as critical hits as a first step
 * Fixed count and display of multiple successes on 10+
+* Background colour same as logo
