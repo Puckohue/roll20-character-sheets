@@ -7,7 +7,7 @@
 
 .charsheet {
 	background-color: #ebe3d1;
-	min-width: 800px;
+	min-width: 880px;
 }
 
 /* Universal styling applied to all elements of these types */
@@ -85,7 +85,7 @@ span.sheet-dee {
 
 .sheet-weapon-section {
   display: grid;
-  grid-template-columns: 175px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px;
+  grid-template-columns: 175px 105px 105px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px;
   grid-template-rows: 40px;
   font-size: 11px;
 }
@@ -97,7 +97,9 @@ span.sheet-dee {
 	width: 3.5em;
 	height: 40px;
 }
-
+.sheet-weapon-section .sheet-short-input {
+	width: 100px;
+}
 .sheet-armor-section {
 	display: grid;
 	grid-template-columns: 80px 175px 50px 50px;
@@ -116,6 +118,13 @@ span.sheet-dee {
   grid-template-rows: 40px;
 }
 
+.repitem {
+	margin-bottom: 5px;
+}
+
+.sheet-weapon-section.sheet-rep_header, .sheet-armor-section.sheet-rep_header {
+	grid-template-rows: 20px;
+}
 
 /* Targetted styling that only effects elements contained within the stated class */
 .sheet-stats h3 {
@@ -138,6 +147,8 @@ span.sheet-dee {
 .sheet-basic,
 .sheet-attributes,
 .sheet-combat,
+.sheet-vehicle,
+.sheet-stockpile,
 .sheet-gear {
 	display: none;
 }
@@ -146,6 +157,8 @@ span.sheet-dee {
 .sheet-tabstoggle[value="basic"] ~ div.sheet-basic,
 .sheet-tabstoggle[value="attributes"] ~ div.sheet-attributes,
 .sheet-tabstoggle[value="combat"] ~ div.sheet-combat,
+.sheet-tabstoggle[value="vehicle"] ~ div.sheet-vehicle,
+.sheet-tabstoggle[value="stockpile"] ~ div.sheet-stockpile,
 .sheet-tabstoggle[value="gear"] ~ div.sheet-gear {
 	display: block;
 }
