@@ -1,3 +1,8 @@
+@font-face {
+	font-family: T2KCharSheet;
+	src: url(https://github.com/Puckohue/roll20-character-sheets/blob/t2k4e/Twilight-2000-v4/STENCILSTD.OTF?raw=true) format("opentype");
+  }
+
 /* Set the min-width so that when the window is resized the look will stay consistant */
 
 .charsheet {
@@ -11,12 +16,12 @@ h2 {
 	font-size: 2em;
 	margin-bottom: 10px;
 	color: #877d70;
-	font-family: 'Stencil Std', fantasy;
+	font-family: T2KCharSheet;
 }
 
 h3, h4, .sheet-lesserLabel {
 	color: #877d70;
-	font-family: 'Stencil Std', fantasy;
+	font-family: T2KCharSheet;
 }
 
 hr {
@@ -26,7 +31,7 @@ hr {
 label {
 	display: inline-block;
 	color: #877d70;
-	font-family: 'Stencil Std', fantasy;
+	font-family: T2KCharSheet;
 }
 
 input {
@@ -86,7 +91,7 @@ span.sheet-dee {
 }
 .sheet-weapon-section span, .sheet-armor-section span {
 	color: #877d70;
-	font-family: 'Stencil Std', fantasy;
+	font-family: T2KCharSheet;
 }
 .sheet-weapon-section select.sheet-short {
 	width: 3.5em;
@@ -147,7 +152,7 @@ span.sheet-dee {
 
 button[type=action] {
 	color: #fff;
-	font-family: 'Stencil Std', fantasy;
+	font-family: T2KCharSheet;
 	background-color: #877d70;
 	border: #877d70;
 }
