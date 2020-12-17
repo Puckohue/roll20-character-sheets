@@ -3,9 +3,10 @@ Created by Jacob Andersson
 Additional layout, fixes, code snippets etc by nocFenix, Oosh, Ian, and others
 
 # Features
-* Attribute and skill rolls
+* Attribute and skill rolls calculate number of successes, and marks a rolled "1" with a red box
 * Roll button for modified rolls (enter dice size manually)
 * Calcualtes encumbrance total
+* For optimal performance please install Stencil Std font (available here: https://github.com/Puckohue/roll20-character-sheets/blob/t2k4e/Twilight-2000-v4/STENCILSTD.OTF?raw=true)
 
 # To Do
 * Add hit location roll
@@ -13,7 +14,6 @@ Additional layout, fixes, code snippets etc by nocFenix, Oosh, Ian, and others
 * Vehicle tab
 * Stockpile tab
 * Charactermancer for character creation
-* Somehow embed stencil std font
 
 # Done
 ## 2020-12-15
@@ -27,3 +27,4 @@ Additional layout, fixes, code snippets etc by nocFenix, Oosh, Ian, and others
 * Background colour same as logo
 ## 2020-12-17
 * Changed weapon blast to A-D range
+* Embedded Stencil Std font
