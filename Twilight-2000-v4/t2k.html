@@ -3,6 +3,8 @@
     <button type="action" name="act_attributes" >Attributes & Skills</button>
     <button type="action" name="act_combat" >Combat & Health</button>
     <button type="action" name="act_gear" >Gear</button>
+    <button type="action" name="act_vehicle" >Vehicle</button>
+    <button type="action" name="act_stockpile" >Stockpile</button>
 </div>
 <input type='hidden' class='sheet-tabstoggle' name='attr_sheetTab'  value='basic'  />
 <br />
@@ -98,7 +100,7 @@
 		<span>
 			<label>Die 2</label>
 			<select name='attr_die2' class='sheet-short'>
-				<option value=''></option>
+				<option value=''> - </option>
 				<option value='12'>d12</option>
 				<option value='10'>d10</option>
 				<option value='8' selected="selected">d8</option>
@@ -131,7 +133,7 @@
 			
 			<label>Heavy Weapons</label>
 			<select name='attr_heavyweapons' class='sheet-short'>
-				<option value=''></option>
+				<option value=''> - </option>
 				<option value='A'>A</option>
 				<option value='B'>B</option>
 				<option value='C'>C</option>
@@ -143,7 +145,7 @@
 			
 			<label>Close Combat</label>
 			<select name='attr_closecombat' class='sheet-short'>
-				<option value=''></option>
+				<option value=''> - </option>
 				<option value='A'>A</option>
 				<option value='B'>B</option>
 				<option value='C'>C</option>
@@ -155,7 +157,7 @@
 			
 			<label>Stamina</label>
 			<select name='attr_stamina' class='sheet-short'>
-				<option value=''></option>
+				<option value=''> - </option>
 				<option value='A'>A</option>
 				<option value='B'>B</option>
 				<option value='C'>C</option>
@@ -178,7 +180,7 @@
 			
 			<label>Driving</label>
 			<select name='attr_driving' class='sheet-short'>
-				<option value=''></option>
+				<option value=''> - </option>
 				<option value='A'>A</option>
 				<option value='B'>B</option>
 				<option value='C'>C</option>
@@ -190,7 +192,7 @@
 			
 			<label>Mobility</label>
 			<select name='attr_mobility' class='sheet-short'>
-				<option value=''></option>
+				<option value=''> - </option>
 				<option value='A'>A</option>
 				<option value='B'>B</option>
 				<option value='C'>C</option>
@@ -202,7 +204,7 @@
 			
 			<label>Ranged Combat</label>
 			<select name='attr_rangedcombat' class='sheet-short'>
-				<option value=''></option>
+				<option value=''> - </option>
 				<option value='A'>A</option>
 				<option value='B'>B</option>
 				<option value='C'>C</option>
@@ -225,7 +227,7 @@
 			
 			<label>Recon</label>
 			<select name='attr_recon' class='sheet-short'>
-				<option value=''></option>
+				<option value=''> - </option>
 				<option value='A'>A</option>
 				<option value='B'>B</option>
 				<option value='C'>C</option>
@@ -237,7 +239,7 @@
 			
 			<label>Survival</label>
 			<select name='attr_survival' class='sheet-short'>
-				<option value=''></option>
+				<option value=''> - </option>
 				<option value='A'>A</option>
 				<option value='B'>B</option>
 				<option value='C'>C</option>
@@ -249,7 +251,7 @@
 			
 			<label>Tech</label>
 			<select name='attr_tech' class='sheet-short'>
-				<option value=''></option>
+				<option value=''> - </option>
 				<option value='A'>A</option>
 				<option value='B'>B</option>
 				<option value='C'>C</option>
@@ -272,7 +274,7 @@
 			
 			<label>Command</label>
 			<select name='attr_command' class='sheet-short'>
-				<option value=''></option>
+				<option value=''> - </option>
 				<option value='A'>A</option>
 				<option value='B'>B</option>
 				<option value='C'>C</option>
@@ -284,7 +286,7 @@
 			
 			<label>Persuasion</label>
 			<select name='attr_persuasion' class='sheet-short'>
-				<option value=''></option>
+				<option value=''> - </option>
 				<option value='A'>A</option>
 				<option value='B'>B</option>
 				<option value='C'>C</option>
@@ -296,7 +298,7 @@
 			
 			<label>Medical Aid</label>
 			<select name='attr_medicalaid' class='sheet-short'>
-				<option value=''></option>
+				<option value=''> - </option>
 				<option value='A'>A</option>
 				<option value='B'>B</option>
 				<option value='C'>C</option>
@@ -321,7 +323,7 @@
 	<br />
 
 	<h2>Combat</h2>
-
+	
 	<hr />
 
 	<div class="3colrow">
@@ -353,7 +355,7 @@
 		<span>
 			<label>Die 2</label>
 			<select name='attr_die2' class='sheet-short'>
-				<option value=''></option>
+				<option value=''> - </option>
 				<option value='12'>d12</option>
 				<option value='10'>d10</option>
 				<option value='8' selected="selected">d8</option>
@@ -384,7 +386,7 @@
 		<div class="col">
 			<span class="lesserLabel">CUF </span>
 			<select name='attr_CUF' class='sheet-short'>
-				<option value=''></option><
+				<option value=''> - </option><
 				<option value='A'>A</option>
 				<option value='B'>B</option>
 				<option value='C'>C</option>
@@ -394,19 +396,19 @@
 	</div>
 	<div class="row">
 		<h3>Weapons</h3>
-		<div class="weapon-section">
+		<div class="weapon-section rep_header">
 			<span>Name</span>
 			<span>Type</span>
-			<span>Ammo</span>
+			<span>Ammo Type</span>
+			<span>Rel.</span>
 			<span>RoF</span>
 			<span>Dam</span>
 			<span>Crit</span>
-			<span>Armor</span>
-			<span>Rel.</span>
-			<span>Range</span>
 			<span>Blast</span>
-			<span>Weight</span>
+			<span>Range</span>
 			<span>Mag</span>
+			<span>Armor</span>
+			<span>Weight</span>
 			<span>Spent</span>
 		</div>
 	</div>
@@ -414,38 +416,28 @@
 		<fieldset class="repeating_weapons">
 			<div class="weapon-section">
 				<input type="text" name="attr_weapon_name" />
-				<select name='attr_weapon_type' class='sheet-short'>
-					<option value=''></option><
-					<option value='SMG'>SMG</option>
-					<option value='LMG'>LMG</option>
-					<option value='GPMG'>GPMG</option>
-					<option value='HMG'>HMG</option>
-					<option value='GL'>GL</option>
-					<option value='RL'>RL</option>
-					<option value='ATRL'>ATRL</option>
-					<option value='ATGM'>ATGM</option>
-				</select>
-				<input type="number" name="attr_weapon_ammotype" />
-				<input type="number" name="attr_weapon_rof" />
-				<input type="number" name="attr_weapon_damage" />
-				<input type="number" name="attr_weapon_crit" />
-				<input type="number" name="attr_weapon_armor" />
+				<input type="text" name="attr_weapon_type" class='sheet-short-input' />
+				<input type="text" name="attr_weapon_ammotype" class='sheet-short-input' />
 				<select name='attr_weapon_reliability' class='sheet-short'>
 					<option value='A'>A</option>
 					<option value='B'>B</option>
 					<option value='C'>C</option>
 					<option value='D'>D</option>
 				</select>
-				<input type="number" name="attr_weapon_range" />
+				<input type="number" name="attr_weapon_rof" />
+				<input type="number" name="attr_weapon_damage" />
+				<input type="number" name="attr_weapon_crit" />
 				<select name='attr_weapon_blast' class='sheet-short'>
-					<option value=''></option>
+					<option value=''> - </option>
 					<option value='A'>A</option>
 					<option value='B'>B</option>
 					<option value='C'>C</option>
 					<option value='D'>D</option>
 				</select>
-				<input type="number" name="attr_weapon_weight" />
+				<input type="number" name="attr_weapon_range" />
 				<input type="number" name="attr_weapon_mag" />
+				<input type="number" name="attr_weapon_armor" />
+				<input type="number" name="attr_weapon_weight" />
 				<input type="number" name="attr_weapon_spent_ammo" />
 			</div>
 		</fieldset>
@@ -455,7 +447,7 @@
 
 	<div class="row">
 		<h3>Armor</h3>
-		<div class="armor-section">
+		<div class="armor-section rep_header">
 			<span>Location</span>
 			<span>Name</span>
 			<span>Rating</span>
@@ -569,9 +561,31 @@
 	<br /><br />
 </div>
 
+<div class="sheet-vehicle">
+	<div class="row">
+		<img src="https://raw.githubusercontent.com/Puckohue/roll20-character-sheets/t2k4e/Twilight-2000-v4/logo.png" />
+   	</div>
+	<br />
+	<h2>Vehicle</h2>
+	<hr />
+
+
+</div>
+
+<div class="sheet-stockpile">
+	<div class="row">
+		<img src="https://raw.githubusercontent.com/Puckohue/roll20-character-sheets/t2k4e/Twilight-2000-v4/logo.png" />
+   	</div>
+	<br />
+	<h2>Stockpile</h2>
+	<hr />
+
+
+</div>
+
 
 <script type="text/worker">
-    const buttonlist = ["basic","attributes","combat","gear"];
+    const buttonlist = ["basic","attributes","combat","gear","vehicle","stockpile"];
     buttonlist.forEach(button => {
         on(`clicked:${button}`, function() {
             setAttrs({
