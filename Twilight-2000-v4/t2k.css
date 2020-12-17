@@ -7,6 +7,15 @@
 
 /* Universal styling applied to all elements of these types */
 
+@font-face{/*The Stencil Std font*/
+    font-family:Stencil Std;
+    src:local('Stencil Std'),local('Stencil-Regular'),url(https://github.com/Puckohue/roll20-character-sheets/blob/t2k4e/Twilight-2000-v4/STENCILSTD.OTF?raw=true);
+}
+
+* {
+    font-family:Stencil Std,Stencil,Monospace;
+}
+
 h2 {
 	font-size: 2em;
 	margin-bottom: 10px;
