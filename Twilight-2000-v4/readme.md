@@ -1,7 +1,7 @@
 # Twilight 2000 4th edition (Alpha) Character Sheet
-Created by Jacob Andersson
-Additional major work with layout, fixes, code snippets etc by nocFenix
-Roll20 code help from Oosh, Ian, and others
+Created by Jacob Andersson (Puckohue). 
+Additional major work with layout, fixes, code snippets etc by nocFenix. 
+Roll20 code help from Oosh, Ian, and others. 
 For optimal performance please install Stencil Std font (available here: https://github.com/Puckohue/roll20-character-sheets/blob/t2k4e/Twilight-2000-v4/STENCILSTD.OTF?raw=true)
 
 # Features
