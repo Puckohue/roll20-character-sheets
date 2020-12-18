@@ -26,12 +26,23 @@ h3, h4, .sheet-lesserLabel {
 
 hr {
 	border-top: 3px solid #877d70;
+	margin-top: 7px;
+	margin-bottom: 7px;
 }
 
 label {
+	font-size: 15px;
 	display: inline-block;
 	color: #877d70;
 	font-family: T2KCharSheet;
+	margin-bottom: 0px;
+	margin-top: 5px;
+}
+
+.sheet-minor {
+	color: #877d70;
+	font-family: T2KCharSheet;
+	font-size: 13px
 }
 
 input {
@@ -39,12 +50,9 @@ input {
 	width: 165px;   
 }
 
-img {
-	max-height: 100px;
-}
-
 textarea {
 	resize: vertical;
+	height: 125px;
 }
 
 /* Targetted styling that only effects elements with these classes */
@@ -115,14 +123,14 @@ span.sheet-dee {
 .sheet-combatgear-section {
   display: grid;
   grid-template-columns: 175px 50px;
-  grid-template-rows: 40px;
+  grid-template-rows: 30px;
 }
 
 .repitem {
 	margin-bottom: 5px;
 }
 
-.sheet-weapon-section.sheet-rep_header, .sheet-armor-section.sheet-rep_header {
+.sheet-weapon-section.sheet-rep_header, .sheet-armor-section.sheet-rep_header, .sheet-combatgear-section.sheet-rep_header {
 	grid-template-rows: 20px;
 }
 
