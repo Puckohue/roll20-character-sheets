@@ -27,3 +27,5 @@ Additional layout, fixes, code snippets etc by nocFenix, Oosh, Ian, and others
 * Background colour same as logo
 ## 2020-12-17
 * Changed weapon blast to A-D range
+## 2020-12-18
+* Compressed the layout.
