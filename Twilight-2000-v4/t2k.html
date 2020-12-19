@@ -346,10 +346,11 @@
 			<h3>&nbsp;</h3>
 			<button type='roll' name='roll_generaldice' value='&{template:default} {{name=@{character_name}}} {{result=[[(1d@{die1}cs>10cf<5>10f<5 + 1)+(1d@{die2}cs>10cf<5>10f<5 + 1)+@{ammodice}d6>6]]}}'></button>
 		</span>
-		<br /><br />
 	</div>
-
 	<div class="row">
+        	<p>&nbsp;</p>
+	</div>
+	<div class="4colrow">
 		<div class="col">
 			<span class="lesserLabel">Ranged Combat </span><button type='roll' name='roll_rangedcombat' value='&{template:default} {{name=@{character_name}}} {{result=[[(1d@{rangedcombatdie}cs>10cf<5>10f<5 + 1)+(1d@{agilitydie}cs>10cf<5>10f<5 + 1)+?{Number of Ammodice|1}d6>6]]}}'></button>
 		</div>
@@ -359,7 +360,7 @@
 		<div class="col">
 			<span class="lesserLabel">CUF </span>
 			<select name='attr_CUF' class='sheet-short'>
-				<option value=''> - </option><
+				<option value=''> - </option>
 				<option value='A'>A</option>
 				<option value='B'>B</option>
 				<option value='C'>C</option>
